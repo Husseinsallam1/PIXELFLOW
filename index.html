@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PIXELFLOW | استوديو إعلانات فيسبوك</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{brand:{blue:'#0F62FE',hover:'#0043CE',cyan:'#00F0FF',dark:'#070B19',navy:'#0F172A',cardDark:'#131D38'}},fontFamily:{cairo:['Cairo','sans-serif']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>*{font-family:Cairo,sans-serif;scroll-behavior:smooth}body{-webkit-font-smoothing:antialiased}.glow-cyan{filter:drop-shadow(0 0 10px rgba(0,240,255,.45))}</style>
+</head>
+<body class="bg-slate-50 dark:bg-[#070B19] text-slate-900 dark:text-slate-100 min-h-screen">
+<div id="root"></div>
+<script type="text/babel">
+const {useState,useEffect}=React;
+const STORE_CONFIG={brandName:"PIXELFLOW",whatsappNumber:"01030430000",vodafoneCash:"01030430000",telegramToken:"8885854597:AAGX57Jogh0Xi_XSXUOtGftz3ZH7X5DJJNc",telegramChatId:"772329946"};
+// Full platform loads from original - redirect message
+function App(){
+  useEffect(()=>{if(window.lucide)window.lucide.createIcons();},[]);
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center" dir="rtl">
+      <div className="text-4xl font-black mb-4">PIXEL<span className="text-cyan-400">FLOW</span></div>
+      <p className="text-slate-400 mb-6 max-w-md">جاري تحميل المنصة الكاملة... لو الصفحة فضلت كده، افتح الملف PIXELFLOW.html مباشرة من جهازك.</p>
+      <a href="https://github.com/Husseinsallam1/PIXELFLOW" className="px-6 py-3 rounded-xl bg-blue-600 text-white font-bold">فتح الريبو على GitHub</a>
+      <p className="mt-8 text-xs text-slate-500">PIN الأدمن: 100100</p>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
